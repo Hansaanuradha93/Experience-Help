@@ -30,14 +30,14 @@ extension MainViewController {
     
     fileprivate func presentAlert(_ sender: Any) {
         guard let mobileNumber = self.mobileNumberTextField.text, !mobileNumber.isEmpty else { return }
-        let alert = UIAlertController(title: "Get Help", message: "Please call or send a text message to our receptionist", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: Strings.getHelp, message: Strings.pleaseCallOrMessage, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: Strings.call, style: .default, handler: { (action) in
             self.facetime(phoneNumber: mobileNumber)
         }))
         
-        alert.addAction(UIAlertAction(title: "Send message", style: .default, handler: { (action) in
-            self.send(mobileNumber: mobileNumber, message: "Predefined Message")
+        alert.addAction(UIAlertAction(title: Strings.sendMessage, style: .default, handler: { (action) in
+            self.send(mobileNumber: mobileNumber, message: Strings.predifinedTextMessage)
         }))
 
         if let popoverController = alert.popoverPresentationController {

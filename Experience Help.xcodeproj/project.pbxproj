@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4764B59624DDB2B300EEBD32 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764B59524DDB2B300EEBD32 /* Strings.swift */; };
 		E80C528D24DA385900F14680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80C528C24DA385900F14680 /* AppDelegate.swift */; };
 		E80C528F24DA385900F14680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80C528E24DA385900F14680 /* SceneDelegate.swift */; };
 		E80C529124DA385900F14680 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80C529024DA385900F14680 /* MainViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4764B59524DDB2B300EEBD32 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E80C528924DA385900F14680 /* Experience Help.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Experience Help.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80C528C24DA385900F14680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E80C528E24DA385900F14680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		4764B59424DDB28700EEBD32 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4764B59524DDB2B300EEBD32 /* Strings.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		E80C528024DA385900F14680 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 			children = (
 				4764B57324DD784E00EEBD32 /* View */,
 				4764B57224DD784200EEBD32 /* Controller */,
+				4764B59424DDB28700EEBD32 /* Constants */,
 				4764B57124DD783000EEBD32 /* Support Files */,
 			);
 			path = "Experience Help";
@@ -285,6 +296,7 @@
 			files = (
 				E80C529124DA385900F14680 /* MainViewController.swift in Sources */,
 				E80C528D24DA385900F14680 /* AppDelegate.swift in Sources */,
+				4764B59624DDB2B300EEBD32 /* Strings.swift in Sources */,
 				E80C528F24DA385900F14680 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
