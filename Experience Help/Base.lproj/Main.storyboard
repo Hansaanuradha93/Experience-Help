@@ -22,10 +22,6 @@
                                     <constraint firstAttribute="height" constant="184" id="ZVg-4f-dMe"/>
                                 </constraints>
                                 <state key="normal" image="video.circle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="PhoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o30-sF-t29"/>
-                                    <action selector="ShowPhone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8WF-Be-T5s"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-zN-hVI">
                                 <rect key="frame" x="184" y="36" width="466" height="433"/>
@@ -85,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="mobileNumberTextField" destination="2nk-9z-A2o" id="FMj-K1-Ad4"/>
+                        <outlet property="topCornerButton" destination="Zxz-pB-gOH" id="uJk-nC-1tg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

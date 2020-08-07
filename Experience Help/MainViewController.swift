@@ -5,6 +5,7 @@ class MainViewController: UIViewController {
     
     // MARK: IBOutets
     @IBOutlet weak var mobileNumberTextField: UITextField!
+    @IBOutlet weak var topCornerButton: UIButton!
     
     
     // MARK: View Controller
@@ -23,6 +24,12 @@ class MainViewController: UIViewController {
 
 // MARK: - Methods
 extension MainViewController {
+    
+    @objc fileprivate func handleLongTap(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == UIGestureRecognizer.State.began {
+            print("Long Press")
+        }
+    }
     
     @objc fileprivate func dismissKeyboard() {
         view.endEditing(true)
@@ -69,6 +76,8 @@ extension MainViewController {
     
     fileprivate func setupUI() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
+        topCornerButton.addGestureRecognizer(longGesture)
     }
 }
 
