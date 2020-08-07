@@ -15,7 +15,6 @@
 		E80C529924DA385A00F14680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80C529724DA385A00F14680 /* LaunchScreen.storyboard */; };
 		E80C52A424DA385B00F14680 /* Experience_HelpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80C52A324DA385B00F14680 /* Experience_HelpTests.swift */; };
 		E80C52AF24DA385B00F14680 /* Experience_HelpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80C52AE24DA385B00F14680 /* Experience_HelpUITests.swift */; };
-		E80C52C324DCCAD900F14680 /* logo-Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E80C52C224DCCAD900F14680 /* logo-Placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		E80C52AA24DA385B00F14680 /* Experience HelpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Experience HelpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80C52AE24DA385B00F14680 /* Experience_HelpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience_HelpUITests.swift; sourceTree = "<group>"; };
 		E80C52B024DA385B00F14680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E80C52C224DCCAD900F14680 /* logo-Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-Placeholder.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +83,6 @@
 				E80C52A224DA385B00F14680 /* Experience HelpTests */,
 				E80C52AD24DA385B00F14680 /* Experience HelpUITests */,
 				E80C528A24DA385900F14680 /* Products */,
-				E80C52C224DCCAD900F14680 /* logo-Placeholder.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,7 +234,6 @@
 			files = (
 				E80C529924DA385A00F14680 /* LaunchScreen.storyboard in Resources */,
 				E80C529624DA385A00F14680 /* Assets.xcassets in Resources */,
-				E80C52C324DCCAD900F14680 /* logo-Placeholder.png in Resources */,
 				E80C529424DA385900F14680 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
