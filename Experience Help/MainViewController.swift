@@ -3,18 +3,25 @@ import MessageUI
 
 class MainViewController: UIViewController {
     
+    // MARK: IBOutets
     @IBOutlet weak var mobileNumberTextField: UITextField!
     
     
+    // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
+    
+    // MARK: IBActions
     @IBAction func NikeButtonPressed(_ sender: Any) {
         presentAlert(sender)
     }
-    
+}
+
+
+// MARK: - Methods
+extension MainViewController {
     
     fileprivate func facetime(phoneNumber:String) {
         guard let faceTimeUrl = URL(string: "facetime-audio://\(phoneNumber)") else { return }
@@ -54,6 +61,7 @@ class MainViewController: UIViewController {
 }
 
 
+// MARK: - MFMessageComposeViewControllerDelegate
 extension MainViewController: MFMessageComposeViewControllerDelegate {
     
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
