@@ -13,8 +13,6 @@ class MainViewController: UIViewController {
     
 
     @IBAction func NikeButtonPressed(_ sender: Any) {
-//        guard let mobileNumber = mobileNumberTextField.text, !mobileNumber.isEmpty else { return }
-//        facetime(phoneNumber: mobileNumber)
         presentAlert(sender)
     }
     
@@ -26,8 +24,10 @@ class MainViewController: UIViewController {
     
     fileprivate func presentAlert(_ sender: Any) {
         let alert = UIAlertController(title: "Get Help", message: "Please call or send a text message to our receptionist", preferredStyle: .actionSheet)
+        
         alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
-            print("Call")
+            guard let mobileNumber = self.mobileNumberTextField.text, !mobileNumber.isEmpty else { return }
+            self.facetime(phoneNumber: mobileNumber)
         }))
         
         alert.addAction(UIAlertAction(title: "Send message", style: .default, handler: { (action) in
@@ -40,7 +40,6 @@ class MainViewController: UIViewController {
             popoverController.permittedArrowDirections = []
         }
         self.present(alert, animated: true, completion: nil)
-        
     }
 }
 
