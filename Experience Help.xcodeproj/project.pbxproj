@@ -76,6 +76,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4764B57124DD783000EEBD32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E80C528E24DA385900F14680 /* SceneDelegate.swift */,
+				E80C528C24DA385900F14680 /* AppDelegate.swift */,
+				E80C529524DA385A00F14680 /* Assets.xcassets */,
+				E80C529A24DA385A00F14680 /* Info.plist */,
+				E80C529724DA385A00F14680 /* LaunchScreen.storyboard */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		4764B57224DD784200EEBD32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E80C529024DA385900F14680 /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4764B57324DD784E00EEBD32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E80C529224DA385900F14680 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		E80C528024DA385900F14680 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +127,9 @@
 		E80C528B24DA385900F14680 /* Experience Help */ = {
 			isa = PBXGroup;
 			children = (
-				E80C528C24DA385900F14680 /* AppDelegate.swift */,
-				E80C528E24DA385900F14680 /* SceneDelegate.swift */,
-				E80C529024DA385900F14680 /* MainViewController.swift */,
-				E80C529224DA385900F14680 /* Main.storyboard */,
-				E80C529524DA385A00F14680 /* Assets.xcassets */,
-				E80C529724DA385A00F14680 /* LaunchScreen.storyboard */,
-				E80C529A24DA385A00F14680 /* Info.plist */,
+				4764B57324DD784E00EEBD32 /* View */,
+				4764B57224DD784200EEBD32 /* Controller */,
+				4764B57124DD783000EEBD32 /* Support Files */,
 			);
 			path = "Experience Help";
 			sourceTree = "<group>";
