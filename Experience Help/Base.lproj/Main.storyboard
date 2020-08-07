@@ -39,7 +39,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="textfield" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="XXX-XXX-XXXX" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nk-9z-A2o">
                                 <rect key="frame" x="122" y="764" width="590.5" height="75"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="MA7-R6-DdP"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Get Help"/>
                                 <connections>
                                     <action selector="NikeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1FN-78-v2d"/>
                                 </connections>
@@ -81,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="mobileNumberTextField" destination="2nk-9z-A2o" id="FMj-K1-Ad4"/>
+                        <outlet property="textFieldHeightConstraint" destination="MA7-R6-DdP" id="t50-u9-omT"/>
                         <outlet property="topCornerButton" destination="Zxz-pB-gOH" id="uJk-nC-1tg"/>
                     </connections>
                 </viewController>

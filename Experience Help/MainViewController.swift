@@ -6,6 +6,11 @@ class MainViewController: UIViewController {
     // MARK: IBOutets
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var topCornerButton: UIButton!
+    @IBOutlet weak var textFieldHeightConstraint: NSLayoutConstraint!
+    
+    
+    // MARK: Properties
+    var isTextFieldHidden = false
     
     
     // MARK: View Controller
@@ -27,12 +32,27 @@ extension MainViewController {
     
     @objc fileprivate func handleLongTap(gesture: UILongPressGestureRecognizer) {
         if gesture.state == UIGestureRecognizer.State.began {
-            print("Long Press")
+            configureTextField()
         }
     }
     
     @objc fileprivate func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    
+    fileprivate func configureTextField() {
+        mobileNumberTextField.backgroundColor = .white
+        if isTextFieldHidden {
+            textFieldHeightConstraint.constant = 75
+        } else {
+            textFieldHeightConstraint.constant = 0
+        }
+        isTextFieldHidden = !isTextFieldHidden
+        
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     
@@ -78,6 +98,7 @@ extension MainViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
         topCornerButton.addGestureRecognizer(longGesture)
+        textFieldHeightConstraint.constant = 75
     }
 }
 
