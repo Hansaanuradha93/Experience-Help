@@ -10,6 +10,7 @@ class MainViewController: UIViewController {
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     
@@ -23,10 +24,16 @@ class MainViewController: UIViewController {
 // MARK: - Methods
 extension MainViewController {
     
+    @objc fileprivate func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
     fileprivate func facetime(phoneNumber:String) {
-        guard let faceTimeUrl = URL(string: "facetime-audio://\(phoneNumber)") else { return }
+        guard let faceTimeUrl = URL(string: "facetime://\(phoneNumber)") else { return }
         UIApplication.shared.open(faceTimeUrl)
     }
+    
     
     fileprivate func presentAlert(_ sender: Any) {
         guard let mobileNumber = self.mobileNumberTextField.text, !mobileNumber.isEmpty else { return }
@@ -57,6 +64,11 @@ extension MainViewController {
         if MFMessageComposeViewController.canSendText() {
             self.present(messageVC, animated: true, completion: nil)
         }
+    }
+    
+    
+    fileprivate func setupUI() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
     }
 }
 
