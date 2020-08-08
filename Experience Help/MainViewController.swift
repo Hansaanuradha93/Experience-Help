@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     
     // MARK: Properties
     var isTextFieldHidden = false
+    var textFieldHeight: CGFloat = 75
     
     
     // MARK: View Controller
@@ -27,7 +28,7 @@ class MainViewController: UIViewController {
 }
 
 
-// MARK: - Methods
+// MARK: - Objc Methods
 extension MainViewController {
     
     @objc fileprivate func handleLongTap(gesture: UILongPressGestureRecognizer) {
@@ -39,12 +40,16 @@ extension MainViewController {
     @objc fileprivate func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+}
+
+
+// MARK: - Methods
+extension MainViewController {
     
     fileprivate func configureTextField() {
         mobileNumberTextField.backgroundColor = .white
         if isTextFieldHidden {
-            textFieldHeightConstraint.constant = 75
+            textFieldHeightConstraint.constant = textFieldHeight
         } else {
             textFieldHeightConstraint.constant = 0
         }
@@ -98,7 +103,7 @@ extension MainViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
         topCornerButton.addGestureRecognizer(longGesture)
-        textFieldHeightConstraint.constant = 75
+        textFieldHeightConstraint.constant = textFieldHeight
     }
 }
 
